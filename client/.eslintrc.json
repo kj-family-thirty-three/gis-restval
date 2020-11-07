@@ -1,0 +1,87 @@
+{
+  "overrides": [
+    {
+      "extends": [
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "../.eslint-config-shared"
+      ],
+      "files": [
+        "*.ts"
+      ],
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "createDefaultProgram": true,
+        "project": [
+          "tsconfig.*?.json"
+        ]
+      },
+      "plugins": [
+        "eslint-plugin-import",
+        "@angular-eslint/eslint-plugin",
+        "@angular-eslint/eslint-plugin-template",
+        "eslint-plugin-jsdoc",
+        "eslint-plugin-prefer-arrow",
+        "@typescript-eslint"
+      ],
+      "rules": {
+        "@angular-eslint/component-class-suffix": "error",
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "prefix": "app",
+            "style": "kebab-case",
+            "type": "element"
+          }
+        ],
+        "@angular-eslint/contextual-lifecycle": "error",
+        "@angular-eslint/directive-class-suffix": "error",
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "prefix": "app",
+            "style": "camelCase",
+            "type": "attribute"
+          }
+        ],
+        "@angular-eslint/no-conflicting-lifecycle": "error",
+        "@angular-eslint/no-host-metadata-property": "error",
+        "@angular-eslint/no-input-rename": "error",
+        "@angular-eslint/no-inputs-metadata-property": "error",
+        "@angular-eslint/no-output-native": "error",
+        "@angular-eslint/no-output-on-prefix": "error",
+        "@angular-eslint/no-output-rename": "error",
+        "@angular-eslint/no-outputs-metadata-property": "error",
+        "@angular-eslint/use-component-view-encapsulation": "error",
+        "@angular-eslint/use-lifecycle-interface": "error",
+        "@angular-eslint/use-pipe-decorator": "error",
+        "@angular-eslint/use-pipe-transform-interface": "error"
+      }
+    },
+    {
+      "extends": [
+        "plugin:@angular-eslint/template/recommended"
+      ],
+      "files": [
+        "*.component.html"
+      ],
+      "rules": {
+        "max-len": [
+          "error",
+          {
+            "code": 120
+          }
+        ]
+      }
+    },
+    {
+      "extends": [
+        "plugin:@angular-eslint/template/process-inline-templates"
+      ],
+      "files": [
+        "*.component.ts"
+      ]
+    }
+  ],
+  "root": true
+}

@@ -1,4 +1,7 @@
 # Environments.
 /env
 
+# Dependencies.
+/node_modules
+
 .vscode

@@ -192,7 +192,6 @@
       "never"
     ],
     "prefer-arrow-callback": "error",
-    "prefer-arrow/prefer-arrow-functions": "error",
     "prefer-const": "error",
     "quote-props": [
       "error",

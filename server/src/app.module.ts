@@ -16,9 +16,9 @@ import { AppService } from './app.service';
     }),
     MongooseModule.forRootAsync({
       useFactory: async (configService: ConfigService) => ({
-        uri: configService.get('DATABASE_URI')
+        uri: configService.get('DATABASE_URI'),
       }),
-      inject: [ConfigService]
+      inject: [ConfigService],
     }),
   ],
   controllers: [AppController],

@@ -184,7 +184,6 @@
     "no-underscore-dangle": "off",
     "no-unsafe-finally": "error",
     "no-unused-labels": "error",
-    "no-unused-vars": 1,
     "no-var": "error",
     "object-shorthand": "error",
     "one-var": [

@@ -1,8 +1,8 @@
 import { HttpService, Logger } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
+import { ConfigService } from '@nestjs/config';
 import { AppModule } from './app.module';
 import { AuthGuard } from './guards/auth.guard';
-import { ConfigService } from '@nestjs/config';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -13,10 +13,10 @@ async function bootstrap() {
   app.useGlobalGuards(new AuthGuard(httpService));
 
   const configService = app.get(ConfigService);
-  const port: number = configService.get("PORT") || 3000;
+  const port: number = configService.get('PORT') || 3000;
 
   await app.listen(port, () => {
-    logger.log(`Listening on port: ${port}`, "Server");
+    logger.log(`Listening on port: ${port}`, 'Server');
   });
 }
 bootstrap();

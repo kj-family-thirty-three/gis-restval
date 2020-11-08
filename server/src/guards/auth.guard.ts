@@ -11,11 +11,13 @@ export class AuthGuard implements CanActivate {
     ctx: ExecutionContext,
   ): boolean | Promise<boolean> | Observable<boolean> {
     const ctxArgs = ctx.getArgs();
+    console.info(ctxArgs);
     const token = '';
     return this.validateRequest(token);
   }
 
   async validateRequest(token: string) {
+    console.info(token);
     return true;
   }
 }
